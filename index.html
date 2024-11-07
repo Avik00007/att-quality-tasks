@@ -11,7 +11,7 @@
     <!-- Rolling Update Bar -->
     <div class="update-bar">
         <marquee behavior="scroll" direction="left">
-            Priority Task 1: Fix critical bug  | Task 2: Update  project status | Task 3: Design pipeline
+            Priority Task 1: Fix critical bug  | Task 2: Update project status | Task 3: Design pipeline
         </marquee>
     </div>
 
@@ -22,50 +22,200 @@
             <thead>
                 <tr>
                     <th>S.No</th>
-                    <th>Dept</th>
-                    <th>Tasks</th>
-                    <th>Handled By</th>
+                    <th>Product</th>
+                    <th>Improvements/Automation Task</th>
+                    <th>Automation Details</th>
+                    <th>Priority</th>
+                    <th>Status</th>
                     <th>ETA</th>
-                    <th>Comments</th>
-                    <th>Link</th>
+                    <th>Owner</th>
+                    <th>Progress/Comments</th>
+                    <th>Link</th> <!-- New column for Link -->
                 </tr>
             </thead>
             <tbody>
+                <!-- Table Data Rows -->
                 <tr>
                     <td>1</td>
-                    <td>DBA</td>
-                    <td>Fix Critical Bug</td>
-                    <td>---</td>
-                    <td>12/11/2024</td>
-                    <td>Urgent issue impacting users</td>
-                    <td><a href="#">View</a></td>
+                    <td>Uverse</td>
+                    <td>ICM Refresh targets addition in genesis for handling Post Scripts</td>
+                    <td>List all the post activities tasks for XPI installation pipeline which can be triggered on need basis</td>
+                    <td>1</td>
+                    <td>In-Progress</td>
+                
+                    <td>8th November</td>
+                    <td>Ram</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>CC</td>
-                    <td>Update Client</td>
-                    <td>---</td>
-                    <td>19/11/2024</td>
-                    <td>Prepare presentation</td>
-                    <td><a href="#">View</a></td>
+                    <td>Both</td>
+                    <td>Project Resource monitoring script not running</td>
+                    <td>script not running from crontab</td>
+                    <td>1</td>
+                    <td>Not Started</td>
+                    
+                    <td>17th Oct</td>
+                    <td>Aaditya</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>INT</td>
-                    <td>Design Homepage</td>
-                    <td>---</td>
-                    <td>16/11/2024</td>
-                    <td>Initial draft ready</td>
-                    <td><a href="#">View</a></td>
+                    <td>ATT</td>
+                    <td>SQD Removal automation follow up with Site team</td>
+                    <td></td>
+                    <td>2</td>
+                    <td>Not Started</td>
+                    <td></td>
+                    <td>Pooja/Harish</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
                 </tr>
                 <tr>
-                    <td>4</td>
-                    <td>DBA</td>
-                    <td>Setup Server</td>
-                    <td>---</td>
-                    <td>15/11/2024</td>
-                    <td>Preliminary setup complete</td>
-                    <td><a href="#">View</a></td>
+                    <td>5</td>
+                    <td>ATT</td>
+                    <td>Organize and maintain shared location</td>
+                    <td>Re organize the shared location with all important docs</td>
+                    <td>1</td>
+                    <td>In-Progress</td>
+                    <td></td>
+                    <td>Pooja</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>TC</td>
+                    <td>TC ITR Delivery pipeline flow</td>
+                    <td>2502 Master creation done , Pipeline under test</td>
+                    <td>1</td>
+                    <td>In-Progress</td>
+                    <td>24th Oct</td>
+                    <td>Mayur</td>
+                    <td>Create version by 23rd Sep</td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>ENS</td>
+                    <td>Cricket SWPS move from Inframate to Jenkins</td>
+                    <td>check for Amdocs flow graph</td>
+                    <td>1</td>
+                    <td>In-Progress</td>
+                    <td>8th November</td>
+                    <td>Nisha</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>ENS</td>
+                    <td>Jenkins job for TLG and UV ABP env integration</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>In-Progress</td>
+                    <td>8th November</td>
+                    <td>Raju/Ajay</td>
+                    <td>replaced toolamc details with incemob010 details, jenkins job is failing</td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>ENS</td>
+                    <td>Online windows CC machine node goes down on weekdays</td>
+                    <td>Add service to bring node up automatically</td>
+                    <td>2</td>
+                    <td>In-Progress</td>
+                    <td></td>
+                    <td>Nisha/Ajay</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>ENS</td>
+                    <td>TLG EAAS SWP Flow Creation</td>
+                    <td>End to End Flow Creation</td>
+                    <td>1</td>
+                    <td>In-Progress</td>
+                    <td>8th November</td>
+                    <td>Raju</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>ATT</td>
+                    <td>ITR delivery pipeline</td>
+                    <td>End to End jenkins pipeline for product delivery</td>
+                    <td>1</td>
+                    <td>In-Progress</td>
+                    <td>8th November</td>
+                    <td>Harish</td>
+                    <td>CSMOL, TLGAPI, FBF completed, MCRM is in progress, TLG-Linux is not possible due to MECHID limitation</td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>ATT</td>
+                    <td>CC Version Comparision from same account</td>
+                    <td>Script to compare Source Version and New Version</td>
+                    <td>1</td>
+                    <td>In-Progress</td>
+                    <td>8th November</td>
+                    <td>Prem</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>ATT</td>
+                    <td>Storage comparision tool/script</td>
+                    <td></td>
+                    <td>2</td>
+                    <td>Not Started</td>
+                    <td></td>
+                    <td>Raju</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>ATT</td>
+                    <td>DB compare tool for comparing DB attributes like primary key, synonym</td>
+                    <td>Take this existing tool from VFIT</td>
+                    <td>1</td>
+                    <td>Not Started</td>
+                    <td>11th November</td>
+                    <td>Avik</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>CC</td>
+                    <td>Dublicate SQD removal automation</td>
+                    <td>follow up with Prashanth to close this</td>
+                    <td>2</td>
+                    <td>Not Started</td>
+                    <td></td>
+                    <td>Harish</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>ATT</td>
+                    <td>List all the illin/Legacy machines from CMDB to check for backup and Support Status</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>Not Started</td>
+                    <td>8th November</td>
+                    <td>Pooja</td>
+                    <td></td>
+                    <td><a href="#">View</a></td> <!-- Link for the row -->
                 </tr>
             </tbody>
         </table>
