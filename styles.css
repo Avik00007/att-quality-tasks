@@ -31,11 +31,11 @@ marquee {
 /* Main Container */
 .container {
     width: 100%;
-    max-width: 1250px;
-    margin: 10 auto;
-    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     background-color: white;
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -48,7 +48,7 @@ h1 {
 
 /* Table Styling */
 table {
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
