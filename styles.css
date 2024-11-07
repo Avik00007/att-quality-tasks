@@ -30,7 +30,7 @@ marquee {
 
 /* Main Container */
 .container {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
