@@ -11,14 +11,39 @@
     <!-- Rolling Update Bar -->
     <div class="update-bar">
         <marquee behavior="scroll" direction="left">
-            Inprogress-Tasks 1: ICM Refresh targets addition in genesis for handling Post Scripts--By:Ram  | Task 2: Organize and maintain shared location--By:Pooja | Task 3: TC ITR Delivery pipeline flow--By:Mayur | Task 4: Cricket SWPS move from Inframate to Jenkins--By:Nisha | Task 5: Jenkins job for TLG and UV ABP env integration--By:Raju/Ajay | Task 6: ITR delivery pipeline--By:Harish | Task 7: CC Version Comparision from same account--By:Prem |
+            Priority Task 1: Fix critical bug  | Task 2: Update project status | Task 3: Design pipeline
         </marquee>
     </div>
 
     <!-- Main Content -->
     <div class="container">
-        <h1>ATT_Quality_Items Dashboard</h1>
-        <table>
+        <h1>ATT_Quality_Items Tasks Dashboard</h1>
+
+        <!-- Filter by Owner Dropdown -->
+        <label for="owner-filter">Filter by Owner:</label>
+        <select id="owner-filter">
+            <option value="all">All Owners</option>
+            <option value="Ram">Ram</option>
+            <option value="Aaditya">Aaditya</option>
+            <option value="Pooja">Pooja</option>
+            <option value="Harish">Harish</option>
+            <option value="Mayur">Mayur</option>
+            <option value="Nisha">Nisha</option>
+            <option value="Raju">Raju</option>
+            <option value="Ajay">Ajay</option>
+            <option value="Prem">Prem</option>
+            <option value="Avik">Avik</option>
+        </select>
+
+        <!-- Filter by Priority Dropdown -->
+        <label for="priority-filter">Filter by Priority:</label>
+        <select id="priority-filter">
+            <option value="all">All Priorities</option>
+            <option value="1">Priority 1</option>
+            <option value="2">Priority 2</option>
+        </select>
+
+        <table id="tasks-table">
             <thead>
                 <tr>
                     <th>S.No</th>
@@ -27,41 +52,42 @@
                     <th>Automation Details</th>
                     <th>Priority</th>
                     <th>Status</th>
+                    <th>Benefits</th>
                     <th>ETA</th>
                     <th>Owner</th>
                     <th>Progress/Comments</th>
-                    <th>Link</th> <!-- New column for Link -->
+                    <th>Link</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Table Data Rows -->
-                <tr>
+                <tr data-owner="Ram" data-priority="1">
                     <td>1</td>
                     <td>Uverse</td>
                     <td>ICM Refresh targets addition in genesis for handling Post Scripts</td>
                     <td>List all the post activities tasks for XPI installation pipeline which can be triggered on need basis</td>
                     <td>1</td>
                     <td>In-Progress</td>
-                
+                    <td></td>
                     <td>8th November</td>
                     <td>Ram</td>
                     <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                    <td><a href="#">View</a></td>
                 </tr>
-                <tr>
+                <tr data-owner="Aaditya" data-priority="1">
                     <td>2</td>
                     <td>Both</td>
                     <td>Project Resource monitoring script not running</td>
                     <td>script not running from crontab</td>
                     <td>1</td>
                     <td>Not Started</td>
-                    
+                    <td></td>
                     <td>17th Oct</td>
                     <td>Aaditya</td>
                     <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                    <td><a href="#">View</a></td>
                 </tr>
-                <tr>
+                <tr data-owner="Pooja" data-priority="2">
                     <td>3</td>
                     <td>ATT</td>
                     <td>SQD Removal automation follow up with Site team</td>
@@ -69,11 +95,12 @@
                     <td>2</td>
                     <td>Not Started</td>
                     <td></td>
+                    <td></td>
                     <td>Pooja/Harish</td>
                     <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                    <td><a href="#">View</a></td>
                 </tr>
-                <tr>
+                <tr data-owner="Pooja" data-priority="1">
                     <td>5</td>
                     <td>ATT</td>
                     <td>Organize and maintain shared location</td>
@@ -81,145 +108,83 @@
                     <td>1</td>
                     <td>In-Progress</td>
                     <td></td>
+                    <td></td>
                     <td>Pooja</td>
                     <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                    <td><a href="#">View</a></td>
                 </tr>
-                <tr>
+                <tr data-owner="Mayur" data-priority="1">
                     <td>6</td>
                     <td>TC</td>
                     <td>TC ITR Delivery pipeline flow</td>
                     <td>2502 Master creation done , Pipeline under test</td>
                     <td>1</td>
                     <td>In-Progress</td>
+                    <td></td>
                     <td>24th Oct</td>
                     <td>Mayur</td>
                     <td>Create version by 23rd Sep</td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                    <td><a href="#">View</a></td>
                 </tr>
-                <tr>
+                <tr data-owner="Nisha" data-priority="1">
                     <td>7</td>
                     <td>ENS</td>
                     <td>Cricket SWPS move from Inframate to Jenkins</td>
                     <td>check for Amdocs flow graph</td>
                     <td>1</td>
                     <td>In-Progress</td>
+                    <td></td>
                     <td>8th November</td>
                     <td>Nisha</td>
                     <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                    <td><a href="#">View</a></td>
                 </tr>
-                <tr>
+                <tr data-owner="Raju" data-priority="2">
                     <td>8</td>
                     <td>ENS</td>
                     <td>Jenkins job for TLG and UV ABP env integration</td>
                     <td></td>
-                    <td>1</td>
+                    <td>2</td>
                     <td>In-Progress</td>
+                    <td></td>
                     <td>8th November</td>
                     <td>Raju/Ajay</td>
                     <td>replaced toolamc details with incemob010 details, jenkins job is failing</td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
+                    <td><a href="#">View</a></td>
                 </tr>
-                <tr>
-                    <td>9</td>
-                    <td>ENS</td>
-                    <td>Online windows CC machine node goes down on weekdays</td>
-                    <td>Add service to bring node up automatically</td>
-                    <td>2</td>
-                    <td>In-Progress</td>
-                    <td></td>
-                    <td>Nisha/Ajay</td>
-                    <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>ENS</td>
-                    <td>TLG EAAS SWP Flow Creation</td>
-                    <td>End to End Flow Creation</td>
-                    <td>1</td>
-                    <td>In-Progress</td>
-                    <td>8th November</td>
-                    <td>Raju</td>
-                    <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>ATT</td>
-                    <td>ITR delivery pipeline</td>
-                    <td>End to End jenkins pipeline for product delivery</td>
-                    <td>1</td>
-                    <td>In-Progress</td>
-                    <td>8th November</td>
-                    <td>Harish</td>
-                    <td>CSMOL, TLGAPI, FBF completed, MCRM is in progress, TLG-Linux is not possible due to MECHID limitation</td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>ATT</td>
-                    <td>CC Version Comparision from same account</td>
-                    <td>Script to compare Source Version and New Version</td>
-                    <td>1</td>
-                    <td>In-Progress</td>
-                    <td>8th November</td>
-                    <td>Prem</td>
-                    <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>ATT</td>
-                    <td>Storage comparision tool/script</td>
-                    <td></td>
-                    <td>2</td>
-                    <td>Not Started</td>
-                    <td></td>
-                    <td>Raju</td>
-                    <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>ATT</td>
-                    <td>DB compare tool for comparing DB attributes like primary key, synonym</td>
-                    <td>Take this existing tool from VFIT</td>
-                    <td>1</td>
-                    <td>Not Started</td>
-                    <td>11th November</td>
-                    <td>Avik</td>
-                    <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>CC</td>
-                    <td>Dublicate SQD removal automation</td>
-                    <td>follow up with Prashanth to close this</td>
-                    <td>2</td>
-                    <td>Not Started</td>
-                    <td></td>
-                    <td>Harish</td>
-                    <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>ATT</td>
-                    <td>List all the illin/Legacy machines from CMDB to check for backup and Support Status</td>
-                    <td></td>
-                    <td>1</td>
-                    <td>Not Started</td>
-                    <td>8th November</td>
-                    <td>Pooja</td>
-                    <td></td>
-                    <td><a href="#">View</a></td> <!-- Link for the row -->
-                </tr>
+                <!-- Add other rows similarly -->
             </tbody>
         </table>
     </div>
+
+    <script>
+        // JavaScript for filtering by owner and priority
+        const filterSelectOwner = document.getElementById("owner-filter");
+        const filterSelectPriority = document.getElementById("priority-filter");
+        const tableRows = document.querySelectorAll("#tasks-table tbody tr");
+
+        function filterTable() {
+            const selectedOwner = filterSelectOwner.value.toLowerCase();
+            const selectedPriority = filterSelectPriority.value;
+
+            tableRows.forEach(row => {
+                const rowOwner = row.getAttribute("data-owner").toLowerCase();
+                const rowPriority = row.getAttribute("data-priority");
+
+                // Check if row matches both owner and priority filters
+                if ((selectedOwner === "all" || rowOwner.includes(selectedOwner)) && 
+                    (selectedPriority === "all" || rowPriority === selectedPriority)) {
+                    row.style.display = ""; // Show row
+                } else {
+                    row.style.display = "none"; // Hide row
+                }
+            });
+        }
+
+        // Attach event listeners to both filter dropdowns
+        filterSelectOwner.addEventListener("change", filterTable);
+        filterSelectPriority.addEventListener("change", filterTable);
+    </script>
 
 </body>
 </html>
